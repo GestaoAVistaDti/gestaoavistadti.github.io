@@ -1,7 +1,7 @@
 # InfraestruturaDti.github.io
 
 Link para o site original:
-https://infraestruturadti.github.io/
+https://gestaoavistadti.github.io/
 
 Detalhes das imagens exibidas: 1920x1080 (16x9)
 
