@@ -4,7 +4,6 @@ Utilize apenas imagens locais neste vetor, não links externos, não há suporte
 */
 
 var imagens = [
-    "imgs/testepresencial.png",
     "imgs/FormsFeedback.gif", 
     "imgs/vemAi.gif",
     "imgs/Keepers.png", 
