@@ -6,8 +6,9 @@ Utilize apenas imagens locais neste vetor, não links externos, não há suporte
 var imagens = [
     "imgs/testepresencial.png",
     "imgs/FormsFeedback.gif", 
-    "imgs/Keepers.png", 
     "imgs/vemAi.gif",
+    "imgs/Keepers.png", 
+
 ]; // array com as imagens
 var tempo = 18000; // tempo em milissegundos para trocar as imagens
 var indice = 0; // indice atual da imagem

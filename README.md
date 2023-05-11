@@ -3,7 +3,7 @@
 Link para o site original:
 https://gestaoavistadti.github.io/
 
-Detalhes das imagens exibidas: 1920x1080 (16x9)
+Detalhes das imagens exibidas: 1920x1080 (16:9)
 
 
 Instruções de uso:
