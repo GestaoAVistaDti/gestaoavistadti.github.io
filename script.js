@@ -8,7 +8,7 @@ var imagens = [
     "imgs/vemAi.gif",
     "imgs/Keepers.png",
     "imgs/ConviteMentoria.png",
-    "imgs/EntreChaves.gif",
+    "imgs/EntreChaves2.gif",
 
 ]; // array com as imagens
 var tempo = 18000; // tempo em milissegundos para trocar as imagens
