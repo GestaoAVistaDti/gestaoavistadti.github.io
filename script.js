@@ -7,7 +7,6 @@ var imagens = [
     "imgs/FormsFeedback.gif", 
     "imgs/vemAi.gif",
     "imgs/Keepers.png",
-    "imgs/ConviteMentoria.png",
     "imgs/EntreChaves2.gif",
 
 ]; // array com as imagens
