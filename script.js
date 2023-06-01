@@ -4,11 +4,11 @@ Utilize apenas imagens locais neste vetor, não links externos, não há suporte
 */
 
 var imagens = [
-    "imgs/FormsFeedback.gif", 
     "imgs/vemAi.gif",
     "imgs/Keepers.png",
     "imgs/EntreChaves2.gif",
     "imgs/CopaCrafter2.gif",
+    "imgs/CuidadoPrincipio.png",
 
 ]; // array com as imagens
 var tempo = 18000; // tempo em milissegundos para trocar as imagens
