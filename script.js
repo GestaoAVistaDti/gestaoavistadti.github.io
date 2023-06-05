@@ -10,7 +10,7 @@ var imagens = [
     "imgs/CuidadoPrincipio.png",
 
 ]; // array com as imagens
-var tempo = 18000; // tempo em milissegundos para trocar as imagens
+var tempo = 23000; // tempo em milissegundos para trocar as imagens
 var indice = 0; // indice atual da imagem
 
 function trocarImagem() {
