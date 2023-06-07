@@ -8,6 +8,7 @@ var imagens = [
     "imgs/gifcanva2.gif",
     "imgs/CopaCrafter2.gif",
     "imgs/CuidadoPrincipio.png",
+    "imgs/testepresencial.png"
 
 ]; // array com as imagens
 var tempo = 23000; // tempo em milissegundos para trocar as imagens
