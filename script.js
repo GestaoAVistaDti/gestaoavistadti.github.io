@@ -7,7 +7,8 @@ var imagens = [
     "imgs/kitVideoConferencia.png",
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
-    "imgs/CuidadoPrincipio.png"
+    "imgs/CuidadoPrincipio.png",
+    "imgs/agilistas.gif"
 
 
 ]; // array com as imagens
