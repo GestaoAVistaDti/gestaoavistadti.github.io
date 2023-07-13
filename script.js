@@ -8,8 +8,8 @@ var imagens = [
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
     "imgs/CuidadoPrincipio.png",
-    "imgs/agilistas.gif",
-    "imgs/Orgulho.png"
+    "imgs/agilistas.gif"
+    
 
 
 ]; // array com as imagens
