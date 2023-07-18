@@ -9,7 +9,7 @@ var imagens = [
     "imgs/gifcanva2.gif",
     "imgs/CuidadoPrincipio.png",
     "imgs/agilistas.gif",
-    "imgs/Censo.png"
+    "imgs/Censo1.gif"
     
 
 
