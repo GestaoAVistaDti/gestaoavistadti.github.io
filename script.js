@@ -4,13 +4,11 @@ Utilize apenas imagens locais neste vetor, não links externos, não há suporte
 */
 
 var imagens = [
-    "imgs/Halloween1 (1).gif",
+    
     "imgs/cervejaAtualizado.jpg",
     "imgs/FeedbackWifi.png",
-    "imag/Halloween1 (2).gif"
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
-    "imgs/Halloween1 (3)",
     "imgs/agilistas.gif",
     
     
