@@ -1,14 +1,20 @@
 var imagens = [
-    "imgs/lojinha-round_.gif",
-    "imgs/cervejaAtualizado.jpg",
-    "imgs/halloween1.gif",
+    
+    "imgs/videoconferência.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/Keepers.png",
-    "imgs/Halloween2.gif",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
-    "imgs/Halloween3.gif",
-];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+]; // array com as imagens
 
 var links = [
     "https://app.powerbi.com/view?r=eyJrIjoiZTk2NGM3YjktOTk0Ni00YWJjLTkwMjEtOWI3ZTUxMGM5NGJiIiwidCI6IjljODUzYmE1LWNlN2MtNGI3MS05YjE0LTQyOWNlNGRiNzlkZCJ9",
