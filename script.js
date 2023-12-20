@@ -1,10 +1,4 @@
-/*
-Script para imagens.
-Utilize apenas imagens locais neste vetor, não links externos, não há suporte para outros links
-*/
-
 var imagens = [
-    
     "imgs/lojinha-round_.gif",
     "imgs/cervejaAtualizado.jpg",
     "imgs/halloween1.gif",
@@ -14,52 +8,34 @@ var imagens = [
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
     "imgs/Halloween3.gif",
-    
-    
-    
-    
-    
-    
-    
-]; // array com as imagens
-var tempo = 23000; // tempo em milissegundos para trocar as imagens
-var indice = 0; // indice atual da imagem
+];
 
-function trocarImagem() {
-    document.getElementById("minha-imagem").src = imagens[indice];
-    indice++;
-    if (indice == imagens.length) {
-        indice = 0;
-    }
-    setTimeout(trocarImagem, tempo);
+var links = [
+    "https://app.powerbi.com/view?r=eyJrIjoiZTk2NGM3YjktOTk0Ni00YWJjLTkwMjEtOWI3ZTUxMGM5NGJiIiwidCI6IjljODUzYmE1LWNlN2MtNGI3MS05YjE0LTQyOWNlNGRiNzlkZCJ9",
+
+];
+
+var tempoImagens = 12000; // tempo em milissegundos para exibir cada imagem
+var tempoLinks = 25000; // tempo em milissegundos para exibir cada link
+var indiceImagens = 0; // índice atual da imagem
+var indiceLinks = 0; // índice atual do link
+
+function mostrarImagem() {
+    document.getElementById("minha-imagem").style.display = "block";
+    document.getElementById("link-iframe").style.display = "none";
+    document.getElementById("minha-imagem").src = imagens[indiceImagens];
+    indiceImagens = (indiceImagens + 1) % imagens.length;
+    setTimeout(mostrarLink, tempoImagens);
+}
+
+function mostrarLink() {
+    document.getElementById("link-iframe").style.display = "block";
+    document.getElementById("minha-imagem").style.display = "none";
+    document.getElementById("link-iframe").src = links[indiceLinks];
+    indiceLinks = (indiceLinks + 1) % links.length;
+    setTimeout(mostrarImagem, tempoLinks);
 }
 
 window.onload = function () {
-    trocarImagem();
+    mostrarImagem();
 };
-
-
-/*
-Script para iframe.
-Utilize apenas links embled ou links de outros sites, não arquivos diretos, estes costumam sair fora de formatação
-*/
-
-var links = [
-    "https://drive.google.com/file/d/1D7oT6xbwJMZOuemyPI0H_0pNxY84dZmJ/preview",
-    "https://drive.google.com/file/d/13TPhtzS3TnrHEZlwqdUmhjVoryUHXsfE/preview",
-    "https://drive.google.com/file/d/1GagAgdX7h1PhncvP1Snpn5OxQ7YrYS9r/preview",
-];
-var indice = 0;
-var intervalo;
-function iniciarRotina() {
-    var iframe = document.getElementById("link-iframe");
-    iframe.src = links[indice];
-    indice = (indice + 1) % links.length;
-}
-function comecarRotina() {
-    iniciarRotina();
-    intervalo = setInterval(iniciarRotina, 18000);
-}
-function pararRotina() {
-    clearInterval(intervalo);
-}

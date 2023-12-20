@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrossel</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    iframe, img {
+      width: 300px;
+      height: 200px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="carousel"></div>
+  <script>
+    const content = [
+      { type: 'image', value: 'https://via.placeholder.com/300x200.png' }, // Exemplo de URL de imagem de espaço reservado
+      { type: 'link', value: 'https://www.google.com' },
+      // Adicione mais imagens ou links conforme necessário
+    ];
+
+    let currentIndex = 0;
+    const carousel = document.getElementById('carousel');
+
+    function showNext() {
+      carousel.innerHTML = ''; // Limpa o conteúdo anterior
+
+      if (content[currentIndex].type === 'image') {
+        const img = document.createElement('img');
+        img.src = content[currentIndex].value;
+        carousel.appendChild(img);
+      } else if (content[currentIndex].type === 'link') {
+        const iframe = document.createElement('iframe');
+        iframe.src = content[currentIndex].value;
+        carousel.appendChild(iframe);
+      }
+
+      currentIndex = (currentIndex + 1) % content.length;
+    }
+
+    // Exibe o próximo item a cada 3 segundos (3000 milissegundos)
+    setInterval(showNext, 3000);
+    showNext(); // Mostra o primeiro item imediatamente
+    window.onload = function () {
+        showNext();
+};
+  </script>
+  
+</body>
+</html>
