@@ -1,19 +1,9 @@
-var imagens = [
-    
-    "imgs/videoconferência.jpg",
+var imagens = [  
+    "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
-    
-    
-    
-    
-    
-    
-    
-    
-    
 ]; // array com as imagens
 
 var links = [
