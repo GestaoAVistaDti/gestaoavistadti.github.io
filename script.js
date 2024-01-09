@@ -5,7 +5,7 @@ var imagens = [
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
     "imgs/MentoriaConvite.png",
-    "imgs/gif_produtividade-1.gif",
+    "imgs/gif_produtividade(pt-1).gif",
     "imgs/gif_produtividade 2.gif",
 ]; // array com as imagens
 
