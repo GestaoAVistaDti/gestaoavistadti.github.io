@@ -5,14 +5,16 @@ var imagens = [
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
     "imgs/MentoriaConvite.png",
+
 ]; // array com as imagens
 
 var links = [
     "https://dti.ag/GestaoaVista",
+
 ];
 
 var tempoImagens = 12000; // tempo em milissegundos para exibir cada imagem
-var tempoLinks = 15000; // tempo em milissegundos para exibir cada link (aumentado para evitar interrupções)
+var tempoLinks = 45000; // tempo em milissegundos para exibir cada link
 var indiceImagens = 0; // índice atual da imagem
 var indiceLinks = 0; // índice atual do link
 
