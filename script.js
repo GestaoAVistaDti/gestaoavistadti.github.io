@@ -4,6 +4,7 @@ var imagens = [
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
+    "imgs/Limpeza.gif",
 ]; // array com as imagens
 
 var links = [
@@ -21,7 +22,13 @@ function mostrarImagem() {
     document.getElementById("link-iframe").style.display = "none";
     document.getElementById("minha-imagem").src = imagens[indiceImagens];
     indiceImagens = (indiceImagens + 1) % imagens.length;
-    setTimeout(mostrarLink, tempoImagens);
+    if (indiceImagens == 0) {
+        setTimeout(mostrarLink, tempoImagens);
+        
+    } else {
+        setTimeout(mostrarImagem, tempoImagens);
+        
+    }
 }
 
 function mostrarLink() {
