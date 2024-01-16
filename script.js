@@ -6,6 +6,8 @@ var imagens = [
     "imgs/agilistas.gif",
     "imgs/MentoriaConvite.png",
     "imgs/Limpeza.gif",
+    "imgs/gif_produtividade-2-(gif-pt-1).gif",
+    "imgs/gif_produtividade-2-(gif-pt-2).gif"
 ]; // array com as imagens
 
 var links = [
