@@ -4,6 +4,8 @@ var imagens = [
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
+    "imgs/MentoriaConvite.png",
+
     "imgs/Limpeza.gif",
 ]; // array com as imagens
 
