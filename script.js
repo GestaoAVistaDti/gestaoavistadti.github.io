@@ -8,6 +8,8 @@ var imagens = [
     "imgs/gif_produtividade(pt-1).gif",
     "imgs/gif_produtividade(pt-2).gif"
     "imgs/Limpeza.gif",
+    "imgs/gif_produtividade-2-(gif-pt-1).gif",
+    "imgs/gif_produtividade-2-(gif-pt-2).gif"
 ]; // array com as imagens
 
 var links = [
