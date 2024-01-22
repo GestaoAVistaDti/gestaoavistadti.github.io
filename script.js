@@ -15,7 +15,7 @@ var links = [
 
 ];
 
-var tempoImagens = 18000; // tempo em milissegundos para exibir cada imagem
+var tempoImagens = 12000; // tempo em milissegundos para exibir cada imagem
 var tempoLinks = 45000; // tempo em milissegundos para exibir cada link
 var indiceImagens = 0; // índice atual da imagem
 var indiceLinks = 0; // índice atual do link
@@ -25,13 +25,14 @@ function mostrarImagem() {
     document.getElementById("link-iframe").style.display = "none";
     document.getElementById("minha-imagem").src = imagens[indiceImagens];
     indiceImagens = (indiceImagens + 1) % imagens.length;
-    if (indiceImagens == 0) {
+    setTimeout(mostrarImagem, tempoImagens);
+    /*if (indiceImagens == 0) {
         setTimeout(mostrarLink, tempoImagens);
         
     } else {
         setTimeout(mostrarImagem, tempoImagens);
         
-    }
+    }*/
 }
 
 function mostrarLink() {
