@@ -1,13 +1,21 @@
 var imagens = [  
     "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
+    "imgs/produtividade02.gif"
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
     "imgs/MentoriaConvite.png",
     "imgs/Limpeza.gif",
+    "imgs/JaneiroBranco1.png",
+    "imgs/JaneiroBranco3.png",
+    "imgs/JaneiroBranco2.png",
+    "imgs/JaneiroBranco4.png",
+    "imgs/JaneiroBranco5.png",
+    "imgs/JaneiroBranco6.png",
     "imgs/gif_produtividade-2-(gif-pt-1).gif",
-    "imgs/gif_produtividade-2-(gif-pt-2).gif"
+    "imgs/gif_produtividade-2-(gif-pt-2).gif",
+    
 ]; // array com as imagens
 
 var links = [
