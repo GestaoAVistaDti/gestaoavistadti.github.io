@@ -4,8 +4,6 @@ var imagens = [
     "imgs/produtividade02.gif",
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
-    "imgs/gif_produtividade-2-(gif-pt-1).gif",
-    "imgs/gif_produtividade-2-(gif-pt-2).gif",
     "imgs/agilistas.gif",
     "imgs/MentoriaConvite.png",
     "imgs/Limpeza.gif",
@@ -17,8 +15,6 @@ var imagens = [
     "imgs/JaneiroBranco6.png",
     
     
-    "imgs/gif_produtividade-2-(gif-pt-1).gif",
-    "imgs/gif_produtividade-2-(gif-pt-1).gif",
     "imgs/NavegueDtiRound.gif"
 ]; // array com as imagens
 
