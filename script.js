@@ -7,13 +7,7 @@ var imagens = [
     "imgs/agilistas.gif",
     "imgs/MentoriaConvite.png",
     "imgs/Limpeza.gif",
-    "imgs/JaneiroBranco1.png",
-    "imgs/JaneiroBranco2.png",
-    "imgs/JaneiroBranco3.png",
-    "imgs/JaneiroBranco4.png",
-    "imgs/JaneiroBranco5.png",
-    "imgs/JaneiroBranco6.png",
-    
+        
     
     "imgs/NavegueDtiRound.gif"
 ]; // array com as imagens
