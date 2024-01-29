@@ -1,7 +1,8 @@
 var imagens = [  
     "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
-    "imgs/produtividade02.gif",
+    "imgs/semana-4_produtividade1.gif",
+    "imgs/semana-4_produtividade2.gif",
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
