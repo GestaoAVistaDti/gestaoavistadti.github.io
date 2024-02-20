@@ -8,7 +8,7 @@ var imagens = [
     "imgs/agilistas.gif",
     "imgs/Limpeza.gif",
     "imgs/Rackers1.png",
-    "imgs/visibilidade.png",
+    
         
     
     "imgs/NavegueDtiRound.gif"
