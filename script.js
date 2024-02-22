@@ -1,4 +1,9 @@
-var imagens = [  
+var imagens = [
+    'imgs/Rackers1.png",
+    'imgs/Rackers2.png",
+    'imgs/Rackers3.png",
+    'imgs/Rackers4.png",
+    'imgs/Rackers5.png",
     "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
