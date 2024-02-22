@@ -1,4 +1,5 @@
 var imagens = [
+    "imgs/gifpadroesdeprojeto.gif",
     "imgs/Rackers_1.png",
     "imgs/Rackers_2.png",
     "imgs/Rackers3.png",
