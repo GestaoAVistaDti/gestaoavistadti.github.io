@@ -1,6 +1,7 @@
 var imagens = [
-    "imgs/gifpadroesdeprojeto.gif",
+    "imgs/tecshotprojetos.gif",
     "imgs/videoconferencia.jpg",
+    "imgs/gifpadroesdeprojeto.gif",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
     "imgs/semana-4_produtividade2.gif",
