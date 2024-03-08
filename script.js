@@ -1,4 +1,5 @@
 var imagens = [
+    "imgs/mulheres - tv4 1.png",
     "imgs/homenagemSave.png",
     "imgs/tecshotprojetos.gif",
     "imgs/videoconferencia.jpg",
