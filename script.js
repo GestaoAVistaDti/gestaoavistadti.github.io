@@ -1,8 +1,7 @@
 var imagens = [
     
-    "imgs/IntegraGaia0324-1.jpg",
-    "imgs/IntegraGaia0324-2.jpg",
-    "imgs/IntegraGaia0324-3.jpg",
+    "imgs/aniversarioGaia1.png",
+    "imgs/aniversarioGaia2.png",
     "imgs/IntegraGaia0324-4.jpg",
     "imgs/IntegraGaia0324-5.jpg",
     "imgs/videoconferencia.jpg",
