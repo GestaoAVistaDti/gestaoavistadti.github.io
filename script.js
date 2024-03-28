@@ -1,5 +1,5 @@
 var imagens = [
-    "imgs/making space.jpg",
+    
     "imgs/aniversarioGaia2.png",
     "imgs/aniversarioGaia1.png",
     "imgs/Vídeo Apresentação - Infra 3 (1).gif",
