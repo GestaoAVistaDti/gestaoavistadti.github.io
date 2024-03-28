@@ -4,7 +4,7 @@ var imagens = [
     "imgs/aniversarioGaia1.png",
     "imgs/Vídeo Apresentação - Infra 3 (1).gif",
     "imgs/Vídeo Apresentação - Facilities 2.gif",
-    "img/Vídeo Apresentação - dti clean 1.gif",
+    "imgs/Vídeo Apresentação - dti clean 1.gif",
     "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
