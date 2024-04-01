@@ -1,10 +1,10 @@
 var imagens = [
     
-    "imgs/aniversarioGaia2.png",
-    "imgs/aniversarioGaia1.png",
     "imgs/VídeoApresentação-Infra3(1).gif",
     "imgs/VídeoApresentação-Facilities2.gif",
     "imgs/VídeoApresentação-dticlean1.gif",
+    "imgs/aniversarioGaia2.png",
+    "imgs/aniversarioGaia1.png",
     "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
