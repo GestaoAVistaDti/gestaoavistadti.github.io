@@ -1,8 +1,9 @@
 var imagens = [
     
-    "imgs/VídeoApresentação-Infra3(1).gif",
+   
     "imgs/VídeoApresentação-Facilities2.gif",
     "imgs/VídeoApresentação-dticlean1.gif",
+    "imgs/VídeoApresentação-Infra3(1).gif",
     "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
@@ -19,7 +20,7 @@ var links = [
 
 ];
 
-var tempoImagens = 20000; // tempo em milissegundos para exibir cada imagem
+var tempoImagens = 40000; // tempo em milissegundos para exibir cada imagem
 var tempoLinks = 45000; // tempo em milissegundos para exibir cada link
 var indiceImagens = 0; // índice atual da imagem
 var indiceLinks = 0; // índice atual do link
