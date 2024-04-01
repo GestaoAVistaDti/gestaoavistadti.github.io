@@ -2,9 +2,9 @@ var imagens = [
     
     "imgs/aniversarioGaia2.png",
     "imgs/aniversarioGaia1.png",
-    "imgs/Vídeo Apresentação - Infra 3 (1).gif",
-    "imgs/Vídeo Apresentação - Facilities 2.gif",
-    "imgs/Vídeo Apresentação - dti clean 1.gif",
+    "imgs/VídeoApresentação-Infra3(1).gif",
+    "imgs/VídeoApresentação-Facilities2.gif",
+    "imgs/VídeoApresentação-dticlean1.gif",
     "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
