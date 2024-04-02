@@ -2,10 +2,10 @@ var imagens = [
     
    
     "imgs/gifinfra1.gif",
+    "imgs/gifinfra5.gif",
+    "imgs/gifinfra4.gif",
     "imgs/gifinfra2.gif",
     "imgs/gifinfra3.gif",
-    "imgs/gifinfra4.gif",
-    "imgs/gifinfra5.gif",
     "imgs/giffacilities1.gif",
     "imgs/giffacilities2.gif",
     "imgs/giffacilities3.gif",
