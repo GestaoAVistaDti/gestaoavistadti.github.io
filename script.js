@@ -22,7 +22,7 @@ var links = [
 
 ];
 
-var tempoImagens = 60000; // tempo em milissegundos para exibir cada imagem
+var tempoImagens = 30000; // tempo em milissegundos para exibir cada imagem
 var tempoLinks = 45000; // tempo em milissegundos para exibir cada link
 var indiceImagens = 0; // índice atual da imagem
 var indiceLinks = 0; // índice atual do link
