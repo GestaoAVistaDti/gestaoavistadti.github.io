@@ -1,9 +1,11 @@
 var imagens = [
     
    
-    "imgs/VídeoApresentação-Facilities2.gif",
-    "imgs/VídeoApresentação-dticlean1.gif",
-    "imgs/VídeoApresentação-Infra3(1).gif",
+    "imgs/gifinfra1.gif",
+    "imgs/gifinfra2.gif",
+    "imgs/gifinfra3.gif",
+    "imgs/gifinfra4.gif",
+    "imgs/gifinfra5.gif",
     "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
