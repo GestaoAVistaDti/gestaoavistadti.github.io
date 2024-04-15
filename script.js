@@ -1,11 +1,22 @@
 var imagens = [
     
-    "imgs/IntegraGaia0324-1.jpg",
-    "imgs/IntegraGaia0324-2.jpg",
-    "imgs/IntegraGaia0324-3.jpg",
-    "imgs/homenagemSave.png",
-    "imgs/tecshotprojetos.gif",
-    "imgs/gifpadroesdeprojeto.gif",
+    "imgs/aniversarioAbril1.png",
+    "imgs/aniversarioAbril2.png",
+    "imgs/gifinfra1.gif",
+    "imgs/gifinfra5.gif",
+    "imgs/gifinfra4.gif",
+    "imgs/gifinfravitor.gif",
+    "imgs/gifinfra2.gif",
+    "imgs/gifinfra3.gif",
+    "imgs/giffacilities1.gif",
+    "imgs/giffacilities2.gif",
+    "imgs/giffacilities3.gif",
+    "imgs/giffacilities4.gif",
+    "imgs/giffacilities5.gif",
+    "imgs/gifdticlean3.gif",
+    "imgs/gifdticlean2.gif",
+    "imgs/gifdticlean1.gif",
+    "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
     "imgs/semana-4_produtividade2.gif",
@@ -20,7 +31,7 @@ var links = [
 
 ];
 
-var tempoImagens = 20000; // tempo em milissegundos para exibir cada imagem
+var tempoImagens = 10000; // tempo em milissegundos para exibir cada imagem
 var tempoLinks = 45000; // tempo em milissegundos para exibir cada link
 var indiceImagens = 0; // índice atual da imagem
 var indiceLinks = 0; // índice atual do link
