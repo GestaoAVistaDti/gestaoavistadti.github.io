@@ -1,5 +1,6 @@
 var imagens = [
     
+    "imgs/Comunicados gerais-reunioes hibridas 1.png",
     "imgs/aniversarioAbril1.png",
     "imgs/aniversarioAbril2.png",
     "imgs/gifinfra1.gif",
@@ -8,6 +9,7 @@ var imagens = [
     "imgs/gifinfravitor.gif",
     "imgs/gifinfra2.gif",
     "imgs/gifinfra3.gif",
+    "imgs/Comunicados gerais-acesso 1.png",
     "imgs/giffacilities1.gif",
     "imgs/giffacilities2.gif",
     "imgs/giffacilities3.gif",
@@ -16,10 +18,10 @@ var imagens = [
     "imgs/gifdticlean3.gif",
     "imgs/gifdticlean2.gif",
     "imgs/gifdticlean1.gif",
-    "imgs/videoconferencia.jpg",
     "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
     "imgs/semana-4_produtividade2.gif",
+    "imgs/Comunicados gerais-cerveja 1.png",
     "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
