@@ -1,9 +1,6 @@
 var imagens = [
 
-    "imgs/Rackers0.png",
-    "imgs/Rackers1.png",
-    "imgs/Rackers2.png",
-    "imgs/Rackers3.png",
+    
     "imgs/Comunicados gerais-reunioes hibridas 1.png",
     "imgs/aniversarioAbril1.png",
     "imgs/aniversarioAbril2.png",
