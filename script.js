@@ -2,8 +2,6 @@ var imagens = [
 
     
     "imgs/Comunicados gerais-reunioes hibridas 1.png",
-    "imgs/aniversarioAbril1.png",
-    "imgs/aniversarioAbril2.png",
     "imgs/gifinfra1.gif",
     "imgs/gifinfra5.gif",
     "imgs/gifinfra4.gif",
