@@ -1,3 +1,8 @@
+var imagensDpsDas18 = [
+    "imgs/Comunicados gerais-cerveja 1.png",
+    "imgs/Comunicados gerais-acesso 1.png",
+
+];
 var imagens = [
     
     "imgs/Comunicados gerais-reunioes hibridas 1.png",
@@ -36,13 +41,20 @@ var links = [
 var tempoImagens = 10000; // tempo em milissegundos para exibir cada imagem
 var tempoLinks = 45000; // tempo em milissegundos para exibir cada link
 var indiceImagens = 0; // índice atual da imagem
+var indiceImagensDps18 = 0; // índice atual da imagemDps18
 var indiceLinks = 0; // índice atual do link
 
 function mostrarImagem() {
     document.getElementById("minha-imagem").style.display = "block";
     document.getElementById("link-iframe").style.display = "none";
-    document.getElementById("minha-imagem").src = imagens[indiceImagens];
+    if(horarioDepoisDas18h()&& imagensDpsDas18.length>0){
+        document.getElementById("minha-imagem").src = imagensDpsDas18[indiceImagensDps18];
+    } else {
+        document.getElementById("minha-imagem").src = imagens[indiceImagens];
+    }
+    indiceImagensDps18 = (indiceImagensDps18 + 1) % imagensDpsDas18.length;
     indiceImagens = (indiceImagens + 1) % imagens.length;
+    
     setTimeout(mostrarImagem, tempoImagens);
     /*if (indiceImagens == 0) {
         setTimeout(mostrarLink, tempoImagens);
@@ -64,3 +76,18 @@ function mostrarLink() {
 window.onload = function () {
     mostrarImagem();
 };
+
+function horarioDepoisDas18h() {
+    // Obtendo a data e hora atual
+    var dataAtual = new Date();
+    var fusoHorarioBrasilia = -3; // Para horário padrão de Brasília
+    var horasBrasilia = dataAtual.getHours();
+
+    // Verificando se o horário é depois das 18h
+    if (horasBrasilia >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
