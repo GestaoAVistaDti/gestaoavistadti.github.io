@@ -10,11 +10,13 @@ var imagens = [
     "imgs/AniversariantesGaia2.png",
     "imgs/Comunicados gerais-reunioes hibridas 1.png",
     "imgs/gifinfra1.gif",
+    "imgs/liandra.gif",
     "imgs/gifinfra5.gif",
     "imgs/gifinfra4.gif",
-    "imgs/gifinfravitor.gif",
     "imgs/gifinfra2.gif",
+    "imgs/gifinfravitor.gif",
     "imgs/gifinfra3.gif",
+    "imgs/evolve.gif",
     "imgs/Comunicados gerais-acesso 1.png",
     "imgs/giffacilities1.gif",
     "imgs/giffacilities2.gif",
@@ -39,7 +41,7 @@ var links = [
 
 ];
 
-var tempoImagens = 10000; // tempo em milissegundos para exibir cada imagem
+var tempoImagens =10000; // tempo em milissegundos para exibir cada imagem
 var tempoLinks = 45000; // tempo em milissegundos para exibir cada link
 var indiceImagens = 0; // índice atual da imagem
 var indiceImagensDps18 = 0; // índice atual da imagemDps18
