@@ -8,6 +8,7 @@ var imagens = [
 
     "imgs/AniversariantesGaia1.png",
     "imgs/AniversariantesGaia2.png",
+    "imgs/ReconhecimentoIgnitions2.gif",
     "imgs/Comunicados gerais-reunioes hibridas 1.png",
     "imgs/gifinfra1.gif",
     "imgs/liandra.gif",
