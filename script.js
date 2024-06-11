@@ -7,6 +7,7 @@ var imagens = [
     "imgs/semana-4_produtividade2.gif",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
+    "imgs/Orgulho.gif",
 ]; // array com as imagens
 
 var links = [
