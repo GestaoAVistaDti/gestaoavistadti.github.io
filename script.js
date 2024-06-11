@@ -1,39 +1,12 @@
 var imagensDpsDas18 = [
-    "imgs/Comunicados gerais-cerveja 1.png",
-    "imgs/Comunicados gerais-acesso 1.png",
 
 ];
 var imagens = [
-    
-
-    "imgs/AniversariantesGaia1.png",
-    "imgs/AniversariantesGaia2.png",
-    "imgs/Comunicados gerais-reunioes hibridas 1.png",
-    "imgs/gifinfra1.gif",
-    "imgs/liandra.gif",
-    "imgs/gifinfra5.gif",
-    "imgs/gifinfra4.gif",
-    "imgs/gifinfra2.gif",
-    "imgs/gifinfravitor.gif",
-    "imgs/gifinfra3.gif",
     "imgs/evolve.gif",
-    "imgs/Comunicados gerais-acesso 1.png",
-    "imgs/giffacilities1.gif",
-    "imgs/giffacilities2.gif",
-    "imgs/giffacilities3.gif",
-    "imgs/giffacilities4.gif",
-    "imgs/giffacilities5.gif",
-    "imgs/gifdticlean3.gif",
-    "imgs/gifdticlean2.gif",
-    "imgs/gifdticlean1.gif",
-    "imgs/FeedbackWifi.png",
     "imgs/semana-4_produtividade1.gif",
     "imgs/semana-4_produtividade2.gif",
-    "imgs/Comunicados gerais-cerveja 1.png",
-    "imgs/Keepers.png",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
-    "imgs/NavegueDtiRound.gif"
 ]; // array com as imagens
 
 var links = [
