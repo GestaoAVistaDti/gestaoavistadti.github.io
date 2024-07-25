@@ -2,7 +2,6 @@ var imagensDpsDas18 = [
 
 ];
 var imagens = [
-    "imgs/EntreChavesLive.gif",
     "imgs/evolve.gif",
     "imgs/semana-4_produtividade1.gif",
     "imgs/semana-4_produtividade2.gif",
