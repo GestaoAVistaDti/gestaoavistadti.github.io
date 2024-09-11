@@ -1,6 +1,6 @@
 const IMAGENS = [
     'imgs/evolve.gif',
-	'imgs/GifTV_EntreChaves_01.gif',
+	'imgs/GifTV_Garden_EntreChaves.gif',
 	'imgs/semana-4_produtividade1.gif',
 	'imgs/semana-4_produtividade2.gif',
 	'imgs/gifcanva2.gif',
