@@ -3,8 +3,6 @@ var imagensDpsDas18 = [
 ];
 var imagens = [
     "imgs/evolve.gif",
-    "imgs/semana-4_produtividade1.gif",
-    "imgs/semana-4_produtividade2.gif",
     "imgs/gifcanva2.gif",
     "imgs/agilistas.gif",
 ]; // array com as imagens
