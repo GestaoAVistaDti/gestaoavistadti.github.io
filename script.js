@@ -1,5 +1,6 @@
 const IMAGENS = [
     'imgs/evolve.gif',
+	'imgs/GifTV_Agilistas_02.gif',
 	'imgs/GifTV_Garden_EntreChaves.gif',
 	'imgs/gifcanva2.gif',
 	'imgs/agilistas.gif',
@@ -10,7 +11,7 @@ const IMAGENS_DPS_18 = [];
 const LINKS = ['https://dti.ag/GestaoaVista'];
 
 const TEMPO = {
-	imagens: 15000,
+	imagens: 35000,
 	links: 45000,
 };
 
