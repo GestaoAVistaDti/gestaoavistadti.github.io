@@ -2,8 +2,6 @@ const IMAGENS = [
     'imgs/evolve.gif',
 	'imgs/GifTV_Agilistas_02.gif',
 	'imgs/GifTV_Garden_EntreChaves.gif',
-	'imgs/gifcanva2.gif',
-	'imgs/agilistas.gif',
 ];
 
 const IMAGENS_DPS_18 = [];
