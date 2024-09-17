@@ -1,5 +1,7 @@
 const IMAGENS = [
     'imgs/evolve.gif',
+	'imgs/KeepersPerifericos.gif',
+	'imgs/KeepersMesaLimpa.gif',
 	'imgs/GifTV_Agilistas_02.gif',
 	'imgs/GifTV_Garden_EntreChaves.gif',
 ];
