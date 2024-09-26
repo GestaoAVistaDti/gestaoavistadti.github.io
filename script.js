@@ -1,7 +1,9 @@
+
+
 const IMAGENS = [
     'imgs/evolve.gif',
-	'imgs/GifTV_Agilistas_02.gif',
 	'imgs/GifTV_Garden_EntreChaves.gif',
+	'imgs/GifTV_Agilistas.gif',
 ];
 
 const IMAGENS_DPS_18 = [];
@@ -63,6 +65,7 @@ function mostrarImagem(indice = null) {
 }
 
 function mostrarLink() {
+	barraProgresso();
 	clearTimeout(estado.temporizador);
 	document.getElementById('link-iframe').style.display = 'block';
 	document.getElementById('minha-imagem').style.display = 'none';
@@ -95,3 +98,19 @@ window.onload = function () {
 	inicializarPaginacao();
 	mostrarImagem();
 };
+function barraProgresso() {
+
+let width = 0;
+let interval = TEMPO.imagens / 100; // dividir o tempo total em 100 partes
+
+let progressBar = document.getElementById('progress-bar');
+
+let intervalId = setInterval(function() {
+  width++;
+  progressBar.style.width = width + '%';
+
+  if (width >= 100) {
+    clearInterval(intervalId);
+  }
+}, interval);
+}
