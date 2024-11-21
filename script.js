@@ -3,6 +3,7 @@
 const IMAGENS = [
 	'imgs/evolve.gif',
 	'imgs/MesConscienciaNegra.gif',
+	'imgs/round_black friday.gif',
 	'imgs/GifTV_Garden_EntreChaves.gif',
 	'imgs/GifTV_Agilistas.gif',
 	'imgs/[MKT]-RedesDti.gif',
