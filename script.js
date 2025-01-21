@@ -5,7 +5,6 @@ const IMAGENS = [
 	'imgs/GifTV_Garden_EntreChaves.gif',
 	'imgs/GifTV_Agilistas.gif',
 	'imgs/[MKT]-RedesDti.gif',
-	'imgs/[MKT]-SintaSeEmCasa.gif',
 
 ];
 
