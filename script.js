@@ -7,6 +7,7 @@ const IMAGENS = [
 	'imgs/[MKT]-RedesDti.gif',
 	'imgs/Mentoria - Convite (TEMPLATE).png',
 	'imgs/Template Teams Mentoria.png',
+	'imgs/EGP_COLORISMO_TV.png'
 
 ];
 
