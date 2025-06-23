@@ -5,8 +5,7 @@ const IMAGENS = [
 	'imgs/GifTV_Garden_EntreChaves.gif',
 	'imgs/GifTV_Agilistas.gif',
 	'imgs/[MKT]-RedesDti.gif',
-	'imgs/mentoria_junho_formatura.gif',
-	'imgs/gif_evento_orgulho.gif'
+	'imgs/mentoria_junho_formatura.gif'
 
 ];
 
