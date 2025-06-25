@@ -4,7 +4,6 @@ const IMAGENS = [
 	'imgs/evolve.gif',
 	'imgs/GifTV_Garden_EntreChaves.gif',
 	'imgs/GifTV_Agilistas.gif',
-	'imgs/Posicionamento2025.gif',
 	'imgs/EventosJuninos.jpg',
 
 ];
