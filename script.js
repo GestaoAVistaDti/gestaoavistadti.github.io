@@ -7,6 +7,7 @@ const IMAGENS = [
 	'imgs/TV_Fluxograma.gif',
 	'imgs/beneficios.gif',
 	'imgs/prevencao_tv.gif',
+	'imgs/DiaDoProgramador.gif',
 
 ];
 
