@@ -6,8 +6,6 @@ const IMAGENS = [
 	'imgs/GifTV_Agilistas.gif',
 	'imgs/TV_Fluxograma.gif',
 	'imgs/TV_Benefícios.gif',
-	'imgs/DiaDoProgramador.gif',
-	'imgs/SetembroAmarelo.png',
 
 ];
 
