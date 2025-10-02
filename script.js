@@ -87,70 +87,40 @@ function mostrarLink() {
 	}
 }
 
-function inicializarPaginacao() {
-	const estruturaPaginacao = IMAGENS.map(
-		(imagem, index) =>
-			`<li><button id="${imagem}" data-index="${index}"></button></li>`
-	).join('');
 
-	document.getElementById('paginacao-imagens').innerHTML = estruturaPaginacao;
-
-	IMAGENS.forEach((imagem, index) => {
-		document
-			.getElementById(imagem)
-			.addEventListener('click', () => mostrarImagem(index));
-	});
-}
 
 function eHorarioDepoisDas18h() {
 	const horaAtual = new Date().getHours();
 	return horaAtual >= 7;
 }
 
-function proximoIndice() {
-	clearTimeout(estado.temporizador);
+// function proximoIndice() {
+// 	clearTimeout(estado.temporizador);
 	
-	if (estado.cicloAtual === 'imagens') {
-		const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
-		const imagensAtual = isDepoisDas18 ? IMAGENS_DPS_18 : IMAGENS;
-		
-		// Verificar se está na última imagem antes de avançar
-		const indiceAtual = isDepoisDas18 ? estado.indiceImagensDps18 : estado.indiceImagens;
-		
-		if (indiceAtual === imagensAtual.length - 1) {
-			// Se está na última imagem, passar para links
-			estado.cicloAtual = 'links';
-			estado.indiceLinks = 0;
-			mostrarLink();
-		} else {
-			// Avançar para próxima imagem
-			if (isDepoisDas18) {
-				estado.indiceImagensDps18 = (estado.indiceImagensDps18 + 1) % imagensAtual.length;
-			} else {
-				estado.indiceImagens = (estado.indiceImagens + 1) % imagensAtual.length;
-			}
-			mostrarImagem();
-		}
-	} else {
-		// Se está nos links, voltar para imagens
-		estado.cicloAtual = 'imagens';
-		estado.indiceLinks = 0;
-		mostrarImagem();
-	}
-}
+// 	if (estado.cicloAtual === 'imagens') {
+// 		mostrarImagem();
+// 	} else {
+// 		// Se está nos links, voltar para imagens
+// 		estado.cicloAtual = 'imagens';
+// 		estado.indiceLinks = 0;
+// 		// Resetar o índice de imagens para começar do início
+// 		estado.indiceImagens = 0;
+// 		estado.indiceImagensDps18 = 0;
+// 		mostrarImagem();
+// 	}
+// }
 
 function inicializarCliqueTela() {
 	// Adicionar listener de clique em toda a tela
 	document.addEventListener('click', function(event) {
 		// Evitar conflito com os botões de paginação
 		if (!event.target.closest('#paginacao-imagens')) {
-			proximoIndice();
+			ExibirProximoConteudo();
 		}
 	});
 }
 
 window.onload = function () {
-	inicializarPaginacao();
 	inicializarCliqueTela(); // Adicionar inicialização do clique
 	mostrarImagem();
 };
@@ -197,7 +167,7 @@ function barraProgresso(indiceAtual) {
     }
 }
 
-function iniciarCiclo() {
+function ExibirProximoConteudo() {
     if (estado.cicloAtual === 'imagens') {
         mostrarImagem();
     } else {
@@ -217,7 +187,11 @@ function mostrarImagem(indice = null) {
     }
     
     // Após mostrar todas as imagens, alternar para links
-    if (indiceAtual === 0 && indice === null) {
+    // Só passa para links quando realmente termina o ciclo completo das imagens
+    const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
+    const imagensAtual = isDepoisDas18 ? IMAGENS_DPS_18 : IMAGENS;
+    
+    if (indiceAtual === imagensAtual.length - 1 && indice === null) {
         estado.cicloAtual = 'links';
         estado.indiceLinks = 0; // Reset do índice de links
         estado.temporizador = setTimeout(() => mostrarLink(), TEMPO.imagens);
