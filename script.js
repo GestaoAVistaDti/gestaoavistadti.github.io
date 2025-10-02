@@ -5,17 +5,14 @@ const IMAGENS = [
 	'imgs/GifTV_Garden_EntreChaves.gif',
 	'imgs/GifTV_Agilistas.gif',
 	'imgs/TV_Fluxograma.gif',
-	'imgs/TV_Benefícios.gif',
-	'imgs/DiaDoProgramador.gif',
-	'imgs/SetembroAmarelo.png',
-
+	'imgs/TV_Beneficios.gif',
 ];
 
 const IMAGENS_DPS_18 = [
 	
 ];
 
-const LINKS = ['https://dti.ag/GestaoaVista'];
+const LINKS = ['https://agreeable-rock-017c1aa0f.1.azurestaticapps.net/'];
 
 const TEMPO = {
 	imagens: 35000,
@@ -27,6 +24,9 @@ const estado = {
 	indiceImagensDps18: 0,
 	indiceLinks: 0,
 	temporizador: null,
+	cicloAtual: 'imagens', // 'imagens' ou 'links'
+	contadorCiclos: 0,
+	indiceGlobal: 0 // Novo: índice global para controlar todas as barras
 };
 function atualizarExibicao(indice = null) {
 	const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
@@ -64,21 +64,27 @@ function atualizarBotoesPaginacao(indiceAtivo) {
 		});
 }
 
-// function mostrarImagem(indice = null) {
-// 	barraProgresso();
-// 	clearTimeout(estado.temporizador);
-// 	atualizarExibicao(indice);
-// 	estado.temporizador = setTimeout(() => mostrarImagem(), TEMPO.imagens);
-// }
-
 function mostrarLink() {
-	barraProgresso();
+	// Calcular o índice global atual (imagens + links já exibidos)
+	const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
+	const imagensAtual = isDepoisDas18 ? IMAGENS_DPS_18 : IMAGENS;
+	const indiceGlobalAtual = imagensAtual.length + estado.indiceLinks;
+	
+	barraProgresso(indiceGlobalAtual);
 	clearTimeout(estado.temporizador);
 	document.getElementById('link-iframe').style.display = 'block';
 	document.getElementById('minha-imagem').style.display = 'none';
 	document.getElementById('link-iframe').src = LINKS[estado.indiceLinks];
-	estado.indiceLinks = (estado.indiceLinks + 1) % LINKS.length;
-	estado.temporizador = setTimeout(mostrarImagem, TEMPO.links);
+	
+	// Após mostrar todos os links, voltar para imagens
+	if (estado.indiceLinks === LINKS.length - 1) {
+		estado.cicloAtual = 'imagens';
+		estado.indiceLinks = 0; // Reset do índice de links
+		estado.temporizador = setTimeout(() => mostrarImagem(), TEMPO.links);
+	} else {
+		estado.indiceLinks = (estado.indiceLinks + 1) % LINKS.length;
+		estado.temporizador = setTimeout(() => mostrarLink(), TEMPO.links);
+	}
 }
 
 function inicializarPaginacao() {
@@ -101,17 +107,65 @@ function eHorarioDepoisDas18h() {
 	return horaAtual >= 7;
 }
 
+function proximoIndice() {
+	clearTimeout(estado.temporizador);
+	
+	if (estado.cicloAtual === 'imagens') {
+		const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
+		const imagensAtual = isDepoisDas18 ? IMAGENS_DPS_18 : IMAGENS;
+		
+		// Verificar se está na última imagem antes de avançar
+		const indiceAtual = isDepoisDas18 ? estado.indiceImagensDps18 : estado.indiceImagens;
+		
+		if (indiceAtual === imagensAtual.length - 1) {
+			// Se está na última imagem, passar para links
+			estado.cicloAtual = 'links';
+			estado.indiceLinks = 0;
+			mostrarLink();
+		} else {
+			// Avançar para próxima imagem
+			if (isDepoisDas18) {
+				estado.indiceImagensDps18 = (estado.indiceImagensDps18 + 1) % imagensAtual.length;
+			} else {
+				estado.indiceImagens = (estado.indiceImagens + 1) % imagensAtual.length;
+			}
+			mostrarImagem();
+		}
+	} else {
+		// Se está nos links, voltar para imagens
+		estado.cicloAtual = 'imagens';
+		estado.indiceLinks = 0;
+		mostrarImagem();
+	}
+}
+
+function inicializarCliqueTela() {
+	// Adicionar listener de clique em toda a tela
+	document.addEventListener('click', function(event) {
+		// Evitar conflito com os botões de paginação
+		if (!event.target.closest('#paginacao-imagens')) {
+			proximoIndice();
+		}
+	});
+}
+
 window.onload = function () {
 	inicializarPaginacao();
+	inicializarCliqueTela(); // Adicionar inicialização do clique
 	mostrarImagem();
 };
 
-function barraProgresso(indiceImagem) {
+function barraProgresso(indiceAtual) {
     var progressBarContainer = document.getElementById('progressBarContainer');
     progressBarContainer.innerHTML = ''; // Limpa barras de progresso antigas
 
-    var total_pages = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0 ? IMAGENS_DPS_18.length : IMAGENS.length;
-    var time_to_change = TEMPO.imagens;
+    // Calcular total de páginas: imagens + links
+    const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
+    const imagensAtual = isDepoisDas18 ? IMAGENS_DPS_18 : IMAGENS;
+    var total_pages = imagensAtual.length + LINKS.length;
+    
+    // Determinar o tempo baseado no tipo de conteúdo atual
+    var time_to_change = estado.cicloAtual === 'imagens' ? TEMPO.imagens : TEMPO.links;
 
     var id; // Definindo o id do setInterval fora do loop
 
@@ -120,12 +174,14 @@ function barraProgresso(indiceImagem) {
         progressBar.className = 'progressBar';
         var progress = document.createElement('div');
         progress.className = 'progress';
-        if(i < indiceImagem) {
-            progress.style.width = '100%'; // Se a imagem já foi mostrada, preenche a barra de progresso
-        } else if(i === indiceImagem) {
-            progress.style.width = '0%'; // Inicializa a barra de progresso da imagem atual com 0%
-            id = setInterval(frame, (time_to_change / 100), progress); // Chama setInterval apenas para a barra de progresso da imagem atual
+        
+        if(i < indiceAtual) {
+            progress.style.width = '100%'; // Se já foi mostrado, preenche a barra
+        } else if(i === indiceAtual) {
+            progress.style.width = '0%'; // Inicializa a barra atual com 0%
+            id = setInterval(frame, (time_to_change / 100), progress);
         }
+        
         progressBar.appendChild(progress);
         progressBarContainer.appendChild(progressBar);
     }
@@ -141,9 +197,31 @@ function barraProgresso(indiceImagem) {
     }
 }
 
+function iniciarCiclo() {
+    if (estado.cicloAtual === 'imagens') {
+        mostrarImagem();
+    } else {
+        mostrarLink();
+    }
+}
+
 function mostrarImagem(indice = null) {
     clearTimeout(estado.temporizador);
     var indiceAtual = atualizarExibicao(indice);
-    barraProgresso(indiceAtual); // Atualiza a barra de progresso quando uma nova imagem é mostrada
-    estado.temporizador = setTimeout(() => mostrarImagem(), TEMPO.imagens);
-} 	
+    
+    // Se foi chamado manualmente (clique), usar o índice fornecido
+    if (indice !== null) {
+        barraProgresso(indice);
+    } else {
+        barraProgresso(indiceAtual);
+    }
+    
+    // Após mostrar todas as imagens, alternar para links
+    if (indiceAtual === 0 && indice === null) {
+        estado.cicloAtual = 'links';
+        estado.indiceLinks = 0; // Reset do índice de links
+        estado.temporizador = setTimeout(() => mostrarLink(), TEMPO.imagens);
+    } else {
+        estado.temporizador = setTimeout(() => mostrarImagem(), TEMPO.imagens);
+    }
+}
