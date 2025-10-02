@@ -4,8 +4,8 @@ const IMAGENS = [
 	'imgs/evolve.gif',
 	'imgs/GifTV_Garden_EntreChaves.gif',
 	'imgs/GifTV_Agilistas.gif',
-	'imgs/TV_Fluxograma.gif',
 	'imgs/TV_Beneficios.gif',
+	'imgs/TV_Fluxograma.gif',
 ];
 
 const IMAGENS_DPS_18 = [
