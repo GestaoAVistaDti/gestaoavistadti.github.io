@@ -6,6 +6,7 @@ const IMAGENS = [
 	'imgs/GifTV_Agilistas.gif',
 	'imgs/TV_Beneficios.gif',
 	'imgs/TV_Fluxograma.gif',
+	'imgs/tv_rocketers.png',
 ];
 
 const IMAGENS_DPS_18 = [
