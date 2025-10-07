@@ -8,7 +8,7 @@ const IMAGENS = [
 	'imgs/TrabalhoHibrido.png',
 	'imgs/TrabalhoHibrido2.png',
 	'imgs/TV_Beneficios.gif',
-	'imgs/TV_Fluxograma.gif',
+	'imgs/Fluxograma_Indicacao.gif',
 	'imgs/Mentoria Out 25_TV.png',
 	'imgs/TV_mentoria 1.gif',
 	'imgs/TV_mentoria 2.gif',
