@@ -9,6 +9,11 @@ const IMAGENS = [
 	'imgs/TrabalhoHibrido2.png',
 	'imgs/TV_Beneficios.gif',
 	'imgs/TV_Fluxograma.gif',
+	'imgs/Mentoria Out 25_TV.png',
+	'imgs/TV_mentoria 1.gif',
+	'imgs/TV_mentoria 2.gif',
+	'imgs/TV_mentoria 3.gif',
+	'imgs/TV_mentoria 4.gif',
 ];
 
 const IMAGENS_DPS_18 = [
