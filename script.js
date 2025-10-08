@@ -6,11 +6,6 @@ const IMAGENS = [
 	'imgs/tv_rocketers.png',
 	'imgs/TrabalhoHibrido.png',
 	'imgs/TrabalhoHibrido2.png',
-	'imgs/Mentoria Out 25_TV.png',
-	'imgs/TV_mentoria 1.gif',
-	'imgs/TV_mentoria 2.gif',
-	'imgs/TV_mentoria 3.gif',
-	'imgs/TV_mentoria 4.gif',
 	'imgs/TV_Beneficios.gif',
 	'imgs/Fluxograma_Indicacao.gif',
 ];
