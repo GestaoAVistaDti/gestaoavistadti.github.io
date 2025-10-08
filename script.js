@@ -1,26 +1,27 @@
 
 
 const IMAGENS = [
-	'imgs/GifTV_Garden_EntreChaves.gif',
-	'imgs/GifTV_Agilistas.gif',
-	'imgs/tv_rocketers.png',
-	'imgs/TV_mentoria.gif',
-	'imgs/TrabalhoHibrido.png',
-	'imgs/TrabalhoHibrido2.png',
-	'imgs/TV_Beneficios.gif',
-	'imgs/Fluxograma_Indicacao.gif',
+	['imgs/GifTV_Garden_EntreChaves.gif', 15],
+	['imgs/GifTV_Agilistas.gif', 10],
+	['imgs/tv_rocketers.png', 15],
+	['imgs/TrabalhoHibrido.png', 20],
+	['imgs/TrabalhoHibrido2.png', 20],
+	['imgs/TV_Beneficios.gif', 8],
+	['imgs/Fluxograma_Indicacao.gif', 20],
 ];
 
 const IMAGENS_DPS_18 = [
 	
 ];
 
-const LINKS = ['https://agreeable-rock-017c1aa0f.1.azurestaticapps.net/'];
+const LINKS = [
+	['https://agreeable-rock-017c1aa0f.1.azurestaticapps.net/', 30]
+];
 
-const TEMPO = {
-	imagens: 35000,
-	links: 45000,
-};
+// const TEMPO = {
+// 	imagens: 35000,
+// 	links: 45000,
+// };
 
 const estado = {
 	indiceImagens: 0,
@@ -44,7 +45,8 @@ function atualizarExibicao(indice = null) {
 		indiceAtual = (indiceAtual + 1) % imagensAtual.length;
 	}
 
-	document.getElementById('minha-imagem').src = imagensAtual[indiceAtual];
+	// Acessar o caminho da imagem (primeiro elemento do array)
+	document.getElementById('minha-imagem').src = imagensAtual[indiceAtual][0];
 	document.getElementById('minha-imagem').style.display = 'block';
 	document.getElementById('link-iframe').style.display = 'none';
 
@@ -77,17 +79,21 @@ function mostrarLink() {
 	clearTimeout(estado.temporizador);
 	document.getElementById('link-iframe').style.display = 'block';
 	document.getElementById('minha-imagem').style.display = 'none';
-	document.getElementById('link-iframe').src = LINKS[estado.indiceLinks];
+	// Acessar a URL do link (primeiro elemento do array)
+	document.getElementById('link-iframe').src = LINKS[estado.indiceLinks][0];
 	
-	// Após mostrar todos os links, voltar para imagens
-	if (estado.indiceLinks === LINKS.length - 1) {
-		estado.cicloAtual = 'imagens';
-		estado.indiceLinks = 0; // Reset do índice de links
-		estado.temporizador = setTimeout(() => mostrarImagem(), TEMPO.links);
-	} else {
-		estado.indiceLinks = (estado.indiceLinks + 1) % LINKS.length;
-		estado.temporizador = setTimeout(() => mostrarLink(), TEMPO.links);
-	}
+	// Obter o tempo específico deste link (segundo elemento do array)
+	const tempoLink = LINKS[estado.indiceLinks][1] * 1000; // Converter para milissegundos
+	
+		// Após mostrar todos os links, voltar para imagens
+		if (estado.indiceLinks === LINKS.length - 1) {
+			estado.cicloAtual = 'imagens';
+			estado.indiceLinks = 0; // Reset do índice de links
+			estado.temporizador = setTimeout(() => mostrarImagem(), tempoLink);
+		} else {
+			estado.indiceLinks = (estado.indiceLinks + 1) % LINKS.length;
+			estado.temporizador = setTimeout(() => mostrarLink(), tempoLink);
+		}
 }
 
 
@@ -138,7 +144,12 @@ function barraProgresso(indiceAtual) {
     var total_pages = imagensAtual.length + LINKS.length;
     
     // Determinar o tempo baseado no tipo de conteúdo atual
-    var time_to_change = estado.cicloAtual === 'imagens' ? TEMPO.imagens : TEMPO.links;
+    var time_to_change;
+    if (estado.cicloAtual === 'imagens') {
+        time_to_change = imagensAtual[indiceAtual][1] * 1000; // Converter para milissegundos
+    } else {
+        time_to_change = LINKS[estado.indiceLinks][1] * 1000; // Converter para milissegundos
+    }
 
     var id; // Definindo o id do setInterval fora do loop
 
@@ -180,6 +191,11 @@ function ExibirProximoConteudo() {
 
 function mostrarImagem(indice = null) {
     clearTimeout(estado.temporizador);
+    
+    // Definir imagensAtual aqui também
+    const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
+    const imagensAtual = isDepoisDas18 ? IMAGENS_DPS_18 : IMAGENS;
+    
     var indiceAtual = atualizarExibicao(indice);
     
     // Se foi chamado manualmente (clique), usar o índice fornecido
@@ -189,16 +205,14 @@ function mostrarImagem(indice = null) {
         barraProgresso(indiceAtual);
     }
     
-    // Após mostrar todas as imagens, alternar para links
-    // Só passa para links quando realmente termina o ciclo completo das imagens
-    const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
-    const imagensAtual = isDepoisDas18 ? IMAGENS_DPS_18 : IMAGENS;
+    // Obter o tempo específico desta imagem (segundo elemento do array)
+    const tempoImagem = imagensAtual[indiceAtual][1] * 1000; // Converter para milissegundos
     
     if (indiceAtual === imagensAtual.length - 1 && indice === null) {
         estado.cicloAtual = 'links';
         estado.indiceLinks = 0; // Reset do índice de links
-        estado.temporizador = setTimeout(() => mostrarLink(), TEMPO.imagens);
+        estado.temporizador = setTimeout(() => mostrarLink(), tempoImagem);
     } else {
-        estado.temporizador = setTimeout(() => mostrarImagem(), TEMPO.imagens);
+        estado.temporizador = setTimeout(() => mostrarImagem(), tempoImagem);
     }
 }
