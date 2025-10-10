@@ -3,6 +3,7 @@
 const IMAGENS = [
 	['imgs/GifTV_Garden_EntreChaves.gif', 15],
 	['imgs/GifTV_Agilistas.gif', 10],
+	['imgs/Guilda_Plural_Outubro_TV.png', 15],
 	['imgs/tv_rocketers.png', 15],
 	['imgs/TV_mentoria.gif', 20],
 	['imgs/TrabalhoHibrido.png', 20],
