@@ -4,9 +4,9 @@ const IMAGENS = [
 	['imgs/GifTV_Garden_EntreChaves.gif', 15],
 	['imgs/GifTV_Agilistas.gif', 10],
 	['imgs/Guilda_Plural_Outubro_TV.png', 15],
-	['imgs/TV_mentoria.gif', 20],
 	['imgs/trabalhoHibrido.png', 20],
 	['imgs/trabalhoHibrido2.png', 20],
+	['imgs/TV_mentoria.gif', 20],
 	['imgs/TV_Beneficios.gif', 8],
 	['imgs/Fluxograma_Indicacao.gif', 20],
 ];
