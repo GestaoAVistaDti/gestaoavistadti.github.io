@@ -6,7 +6,7 @@ const IMAGENS = [
 	['imgs/Guilda_Plural_Outubro_TV.png', 15],
 	['imgs/trabalhoHibrido.png', 20],
 	['imgs/trabalhoHibrido2.png', 20],
-	['imgs/TV_mentoria.gif', 20],
+	['imgs/VendaPcs.jpg', 25],
 	['imgs/TV_Beneficios.gif', 8],
 	['imgs/Fluxograma_Indicacao.gif', 20],
 ];
