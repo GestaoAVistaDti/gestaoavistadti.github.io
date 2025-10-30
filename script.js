@@ -15,7 +15,7 @@ const IMAGENS_DPS_18 = [
 ];
 
 const LINKS = [
-	['https://agreeable-rock-017c1aa0f.1.azurestaticapps.net/', 30]
+	['https://agreeable-rock-017c1aa0f.1.azurestaticapps.net/', 30],
 ];
 
 // const TEMPO = {
