@@ -3,7 +3,6 @@
 const IMAGENS = [
 	['imgs/GifTV_Garden_EntreChaves.gif', 15],
 	['imgs/GifTV_Agilistas.gif', 10],
-	['imgs/Kts_tvs.png', 20],
 	['imgs/trabalhoHibrido.png', 20],
 	['imgs/trabalhoHibrido2.png', 20],
 	['imgs/VendaPcs.jpg', 25],
@@ -33,6 +32,8 @@ const estado = {
 	contadorCiclos: 0,
 	indiceGlobal: 0 // Novo: índice global para controlar todas as barras
 };
+
+
 function atualizarExibicao(indice = null) {
 	const isDepoisDas18 = eHorarioDepoisDas18h() && IMAGENS_DPS_18.length > 0;
 	const imagensAtual = isDepoisDas18 ? IMAGENS_DPS_18 : IMAGENS;
